@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS Contains (
 
 CREATE TABLE IF NOT EXISTS Review (
     PID CHAR(12) NOT NULL,
-    PersonalNumber CHAR(12) NOT NULL UNIQUE,
+    PersonalNumber CHAR(12) NOT NULL,
     Stars INT NOT NULL CHECK (Stars >= 1 AND Stars <= 5),
     TextComment NVARCHAR(500),
     PRIMARY KEY (PID , PersonalNumber),

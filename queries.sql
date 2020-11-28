@@ -54,7 +54,7 @@ WHERE
 SELECT 
     P.Title,
     P.ShortDescription,
-    (P.RetailPriceNoVAT * (1 - P.VATPercent) * (1 - P.Discount)) AS CurrentRetailPrice,
+    (P.RetailPriceNoVAT * (1 + P.VATPercent) * (1 - P.Discount)) AS CurrentRetailPrice,
     AVG(R.Stars)
 FROM
     Product P
